@@ -1,0 +1,57 @@
+body{
+    width: 100%;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    background-color: rgb(160, 160, 160);
+    padding: 2rem 0;
+}
+
+
+header a {
+    color: rgb(67, 67, 193);
+}
+
+section form {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section form div {
+    margin: .5rem;
+}
+
+section form div input {
+    padding: 1rem 10rem;
+    text-align: center;
+}
+
+
+
+footer {
+    background-color: rgb(160, 160, 160);
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+footer .copyright {
+    margin: auto 0;
+}
+
+footer .contact_footer{
+    margin: 1rem;
+}
+

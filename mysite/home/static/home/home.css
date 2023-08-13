@@ -1,0 +1,33 @@
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+nav div {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: .5rem;
+    margin: .5rem 1rem;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.side {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem;
+    padding-top: 3rem;
+    padding-bottom: 40vh;
+    /* padding-right: 3rem; */
+    background-color: rgb(228, 228, 228);
+}
+
+.side a {
+    padding: .5rem;
+}
+

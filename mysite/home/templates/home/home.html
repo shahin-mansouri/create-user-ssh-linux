@@ -1,0 +1,41 @@
+{% extends 'accounts/base.html' %}
+{% load static %}
+
+
+{% block content %}
+    
+<div class="main">
+    <div class="side">
+        
+        {% for ssh in sshs %}
+            <a href="{% url 'ssh_detail' ssh.pk%}">{{ssh}}</a>
+        {% endfor %}
+            
+    </div>
+    <div class="detail">
+        <nav>
+            <div class="user"><h3>Username {{user}}</h3></div>
+            <div class="logout"><a href="{% url 'logout' %}">Logout</a></div>
+            <div class="create"><a href="">Create ssh</a></div>
+        </nav>
+        <div class="ssh-detail">
+            
+            <p>{{success}}</p>
+            {% if pk %}
+            <form action="{% url 'save' id.pk%}" method="post" class="change-form">
+                {% csrf_token %}
+                <h2>{{ssh.ssh_name}}</h2>
+                <input type="text" name="password" value="{{ssh.password}}" required>
+                <input type="date" name="exp" value="{{ssh.pub_date|date:'Y-m-d'}}" required>
+                <input type="submit" value="Change">
+            </form>
+            {% else %}
+                <h3 style="color: rgb(252, 107, 107);">Select ssh.</h3>
+            {% endif %}
+                
+
+        </div>
+    </div>
+</div>
+{% endblock content %}
+    

@@ -1,0 +1,38 @@
+{% load static %}
+{% load widget_tweaks %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'accounts/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'accounts/base.css' %}">
+    <link rel="stylesheet" href="{% static 'home/home.css' %}">
+    {% if user.is_authenticated %}
+    <title>{{user}}</title>
+    {% else %}
+    <title>login ...</title>
+    {% endif %}
+</head>
+<body>
+    {% block header %}
+    <header>
+            <h1>Manage accounts</h1>
+    </header>
+    {% endblock header %}
+
+    {% block content %}
+    {% endblock content %}
+
+    {% block footer %} 
+    <footer>
+        <div class="copyright"><p>Copyright &copy; 2023</p></div>
+        <div>
+            <div class="contact_footer"><a href="mailto:mansouri_math_kntu@yahoo.com">mansouri_math_kntu@yahoo.com</a></div>
+            <div class="contact_footer"><a href="tel:+989198988896">09198988896</a></div>
+        </div>
+    </footer>
+    {% endblock footer %}
+</body>
+</html>

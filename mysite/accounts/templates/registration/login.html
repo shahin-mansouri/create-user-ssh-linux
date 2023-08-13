@@ -1,0 +1,35 @@
+{% extends 'accounts/base.html' %}
+{% load static %}
+{% load widget_tweaks %}
+
+{% block content %}
+
+    <section>
+        <form action="" method="post" class="login-form">
+            {% csrf_token %}
+            <p>{{errorMessage}}</p>
+
+            {% comment %} {% if next %}
+                {% if user.is_authenticated %}
+                    <p>Your account doesn't have access to this page. To proceed, please login with an account that has access.</p>
+                {% else %}
+                    <p>Please login to see this page.</p>
+                {% endif %}
+            {% endif %} {% endcomment %}
+
+            {% comment %} <div class="username" name='username'>{{ form.username|attr:"placeholder:Enter your username"|attr:"name:username" }}</div>
+            <div class="password" name='password'>{{ form.password|attr:"placeholder:Enter your password"|attr:"name:username" }}</div> {% endcomment %}
+            
+            <div class="username"><input type="text" name="username" placeholder="Enter yout username" required></div>
+            <div class="password"><input type="password" name="password" placeholder="Enter your password" required></div>
+            <div class="submit">
+                <input type="submit" value="Login">
+                {% comment %} <input type="hidden" name="next" value="{{ next }}" /> {% endcomment %}
+            </div>
+
+        </form>
+    </section>
+
+{% endblock content %}
+
+
