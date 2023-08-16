@@ -22,16 +22,9 @@ header {
 
 
 header h1 {
-    font-size: 1em;
+    font-size: 1.5em;
 }
 
-header button.btn.btn-primary {
-    background-color: #052F43;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border: 0 solid black;
-}
 
 header a {
     color: rgb(67, 67, 193);
@@ -51,7 +44,7 @@ section form div {
 section form div input {
     padding: 1rem 5rem;
     text-align: center;
-    border: .1px solid rgba(160, 160, 160, 0.247);
+    border: .3px solid rgb(160, 160, 160);
     border-radius: 10px;
 }
 

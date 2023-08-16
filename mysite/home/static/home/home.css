@@ -15,10 +15,14 @@
     /* margin: .5rem 1rem; */
 }
 
-.main {
-    display: flex;
-    flex-direction: row;
 
+header button.btn.btn-primary {
+    background-color: #052F43;
+    position: absolute;
+    top: .5rem;
+    left: .8rem;
+    border: 0 solid black;
+    padding: 1rem;
 }
 
 .side {
@@ -33,7 +37,8 @@
 }
 
 .side a {
-    padding: .1rem;
+    font-size: 1.5em;
+    padding-top: 1rem;
 }
 
 .ssh-detail {
