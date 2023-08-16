@@ -1,14 +1,18 @@
-nav {
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1em;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-nav div {
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+.nav div {
+    /* border-top: .5px solid black; */
+    /* border-bottom: .5px solid black; */
     padding: .5rem;
-    margin: .5rem 1rem;
+    /* margin: .5rem 1rem; */
 }
 
 .main {
@@ -20,14 +24,43 @@ nav div {
 .side {
     display: flex;
     flex-direction: column;
-    padding: 5rem;
-    padding-top: 3rem;
-    padding-bottom: 40vh;
+    justify-content: left;
+    padding: .5rem;
+    /* padding-top: 1rem; */
+    /* padding-bottom: 40vh; */
     /* padding-right: 3rem; */
-    background-color: rgb(228, 228, 228);
+    background-color: rgba(228, 228, 228, 0);
 }
 
 .side a {
-    padding: .5rem;
+    padding: .1rem;
 }
+
+.ssh-detail {
+    display: flex;
+    justify-content: center;
+}
+
+.ssh-detail h3,  .ssh-detail p{
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.ssh-detail form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+}
+
+.ssh-detail form h2 {
+    color: #074E58;
+}
+
+.ssh-detail form input {
+    margin-top: .5rem;
+    border-radius: 5px;
+    border: .5px solid #097370;
+}
+
 

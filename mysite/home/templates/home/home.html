@@ -2,25 +2,43 @@
 {% load static %}
 
 
+
+{% block sidebar %}
+    {% if user.is_authenticated %}
+        <button class="btn btn-primary fas fa-bars" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop"></button>
+        
+        <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+            <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="staticBackdropLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="nav">
+                <div class="user"><h3>Hi {{user}}</h3></div>
+                <div class="logout"><a href="{% url 'logout' %}">Logout</a></div>
+                <div class="create"><a href="">Create ssh</a></div>
+            </div>
+            
+            <div class="offcanvas-body">
+            <div>
+                <div class="side">
+        
+                    {% for ssh in sshs %}
+                        <a href="{% url 'ssh_detail' ssh.pk%}">{{ssh}}</a>
+                    {% endfor %}
+                        
+                </div>
+            </div>
+            </div>
+        </div>
+    
+    {% endif %}
+{% endblock sidebar %}
+    
+
+
 {% block content %}
     
-<div class="main">
-    <div class="side">
-        
-        {% for ssh in sshs %}
-            <a href="{% url 'ssh_detail' ssh.pk%}">{{ssh}}</a>
-        {% endfor %}
-            
-    </div>
-    <div class="detail">
-        <nav>
-            <div class="user"><h3>Username {{user}}</h3></div>
-            <div class="logout"><a href="{% url 'logout' %}">Logout</a></div>
-            <div class="create"><a href="">Create ssh</a></div>
-        </nav>
-        <div class="ssh-detail">
-            
-            <p>{{success}}</p>
+<div class="ssh-detail">
             {% if pk %}
             <form action="{% url 'save' id.pk%}" method="post" class="change-form">
                 {% csrf_token %}
@@ -30,12 +48,11 @@
                 <input type="submit" value="Change">
             </form>
             {% else %}
+            <div>
+                <p>{{success}}</p>
                 <h3 style="color: rgb(252, 107, 107);">Select ssh.</h3>
+            </div>
             {% endif %}
-                
-
-        </div>
-    </div>
 </div>
 {% endblock content %}
     

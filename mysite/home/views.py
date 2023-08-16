@@ -52,7 +52,7 @@ def change(request, pk):
     if not do_it:
         context = dict()
         context["sshs"] = sorted(Ssh.objects.all(), key=lambda x: x.ssh_name)
-        context['success'] = 'unchanged password. Try again!'
+        context['success'] = 'Unchanged password. Try again!'
         context['pk'] = False
         return render(request, './home/home.html', context)
 
@@ -61,7 +61,7 @@ def change(request, pk):
     ssh.save()
     context = dict()
     context["sshs"] = sorted(Ssh.objects.all(), key=lambda x: x.ssh_name)
-    context['success'] = f'successfully. Password of {username} changed!'
+    context['success'] = f'Successfully. Password of {username} changed.'
     context['pk'] = False
     return render(request, './home/home.html', context)
 

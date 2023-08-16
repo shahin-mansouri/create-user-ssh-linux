@@ -23,10 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-yq^&d=waq4pqb71e&#3*)0f3gu&#u&3x6)qaelzm)g@^m9p(oc'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['service.poan9540.shop']
-
+# ALLOWED_HOSTS = ['service.poan9540.shop']
+ALLOWED_HOSTS = []
 
 # Application definition
 
