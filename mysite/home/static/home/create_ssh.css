@@ -1,0 +1,50 @@
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+
+form table {
+    display: flex;
+    justify-content: center;
+    font-size: .9em;
+    /* margin-top: 1rem; */
+}
+
+form table input, form table label {
+    margin-top: .75rem;
+}
+
+form input {
+    border: .4px solid rgba(0, 0, 0, 0.719);
+    border-radius: 5px;
+}
+
+.password, .username, .date{
+    text-align: center;
+    padding: .5rem 3rem;
+}
+
+.date {
+    padding: .5rem 4.5rem
+}
+
+form .submit input{
+    text-align: center;
+    font-size: .9em;
+    /* height: 1.5rem;
+    width: 4rem; */
+    padding: .35rem 3rem;
+}
+
+form div.submit {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+
+
+

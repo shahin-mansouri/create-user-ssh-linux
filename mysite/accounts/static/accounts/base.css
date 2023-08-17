@@ -30,6 +30,51 @@ header a {
     color: rgb(67, 67, 193);
 }
 
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.nav div {
+    /* border-top: .5px solid black; */
+    /* border-bottom: .5px solid black; */
+    padding: .5rem;
+    /* margin: .5rem 1rem; */
+}
+
+
+header button.btn.btn-primary {
+    background-color: #052F43;
+    position: absolute;
+    top: .5rem;
+    left: .8rem;
+    border: 0 solid black;
+    padding: 1rem;
+}
+
+.side {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding: .5rem;
+    /* padding-top: 1rem; */
+    /* padding-bottom: 40vh; */
+    /* padding-right: 3rem; */
+    background-color: rgba(228, 228, 228, 0);
+}
+
+.side a {
+    font-size: 1.5em;
+    padding-top: 1rem;
+}
+
+
 section form {
     margin-top: 1rem;
     display: flex;
