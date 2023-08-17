@@ -17,10 +17,14 @@ class CreateSshForm(forms.ModelForm):
     class Meta:
         """Meta definition for CreateSshform."""
 
-        model = Ssh
-        widgets = {'ssh_name': forms.TextInput(attrs={'class': 'username', 'placeholder': 'Enter Username'}),
-                   'password': forms.PasswordInput({'class': 'password', 'placeholder': 'Enter Password'}),
-                   'pub_date': forms.DateInput(attrs={'class': 'date', 'type': 'date'})}
-        fields = ['ssh_name', 'password', 'pub_date']
-        labels = {'ssh_name': '', 'password': '', 'pub_date': ''}
+        model   = Ssh
+        widgets = {'ssh_name': forms.TextInput    (attrs={'class': 'username', 'placeholder': 'Enter Username'}),
+                   'password': forms.PasswordInput(attrs={'class': 'password', 'placeholder': 'Enter Password'}),
+                   'pub_date': forms.DateInput    (attrs={'class': 'date'    , 'type'       : 'date'          }),}
+        
+        fields  = ['ssh_name', 'password', 'pub_date']
+
+        labels  = {'ssh_name': '',
+                   'password': '',
+                   'pub_date': '',}
 
