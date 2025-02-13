@@ -41,23 +41,27 @@ Before setting up the service, ensure you have the following installed:
    source venv/bin/activate
    ```
 
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-3. Run migrations:
+4. Run migrations:
    ```bash
    python manage.py migrate
    ```
 
-4. Create a superuser for the Django admin panel:
+5. Create a superuser for the Django admin panel:
    ```bash
    python manage.py createsuperuser
    ```
 
-5. Start the development server:
+6. Start the development server:
    ```bash
    python manage.py runserver
    ```
 
-6. Access the admin dashboard at `http://127.0.0.1:8000/admin/` and start managing users.
+7. Access the admin dashboard at `http://127.0.0.1:8000/admin/` and start managing users.
 
 
 
